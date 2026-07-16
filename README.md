@@ -158,6 +158,15 @@ pytest -q
 
 The GitHub repository also includes an automated test workflow for Python 3.10–3.13.
 
+## Repository and citation
+
+The source code and fixed software releases are available from:
+
+- Repository: https://github.com/chriszyu9605/BA-ARAP-NMA
+- Version 1.0.0 release: https://github.com/chriszyu9605/BA-ARAP-NMA/releases/tag/v1.0.0
+
+If you use BA-ARAP-NMA, please cite the software using the metadata provided in `CITATION.cff`. The citation for the associated article will be added after publication.
+
 ## License
 
 MIT License. See `LICENSE`.
