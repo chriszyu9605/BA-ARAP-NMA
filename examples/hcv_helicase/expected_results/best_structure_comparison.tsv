@@ -1,0 +1,3 @@
+method	mode_rank	orientation	frame	requested_amplitude_A	target_rmsd_A	transition_coverage	input_relative_virtual_angle_mae_deg	file
+ba_arap_nma	1	-1	16	4.0	1.2804359980015207	0.7086516315734097	0.1488907881267751	ba_arap_nma_best_ca.pdb
+linear_ca_anm	1	-1	17	4.25	1.5024762313413476	0.65812895038545	1.5339751079686768	linear_ca_anm_best_ca.pdb
