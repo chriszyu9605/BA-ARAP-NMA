@@ -8,7 +8,7 @@ def test_public_metric_set_only():
     structure = load_structure(ROOT / "data/toy_input.pdb")
     metrics = local_geometry_metrics(structure.coords, structure.coords.copy(), structure.segment_ids)
     assert set(metrics) == {
-        "virtual_bond_energy_k500",
+        "mean_squared_adjacent_ca_distance_deviation_A2",
         "adjacent_ca_distance_mae_A",
         "adjacent_distance_outliers_gt_0p5_A",
         "adjacent_distance_outliers_gt_1p0_A",

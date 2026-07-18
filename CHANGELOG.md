@@ -6,7 +6,8 @@
 - Added target-free and two-state command-line workflows.
 - Integrated cumulative-overlap, displacement-retention, leading-mode-concentration, and local-distance-change analyses for paired PDB states.
 - Standardized PDB, PyMOL, frame-metric, and summary outputs.
-- Removed article-specific calculation logic and unvalidated diagnostic outputs from the user release.
+- Defined the frame-level squared-distance metric as the parameter-free mean squared adjacent C-alpha distance deviation (A^2), calculated directly from full-precision generated coordinates.
+- Removed project-specific calculation logic and unvalidated diagnostic outputs from the standalone release.
 
 - Finalized public output names as amplitude-ordered structure sets rather than time trajectories.
 - Enforced `.pdb` input files at the command-line interface.

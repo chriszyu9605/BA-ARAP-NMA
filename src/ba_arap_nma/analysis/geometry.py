@@ -11,7 +11,7 @@ def _angle(a,b,c):
     if nu<1e-12 or nv<1e-12: return np.nan
     return np.degrees(np.arccos(np.clip(np.dot(u,v)/(nu*nv),-1.0,1.0)))
 
-def local_geometry_metrics(reference: Array, coords: Array, segment_ids, k_virtual_bond: float=500.0):
+def local_geometry_metrics(reference: Array, coords: Array, segment_ids):
     edges=_pairs(segment_ids,1)
     d0=np.array([np.linalg.norm(reference[i]-reference[j]) for i,j in edges])
     d=np.array([np.linalg.norm(coords[i]-coords[j]) for i,j in edges])
@@ -21,7 +21,7 @@ def local_geometry_metrics(reference: Array, coords: Array, segment_ids, k_virtu
     a=np.array([_angle(coords[i],coords[j],coords[k]) for i,j,k in triples])
     adev=np.abs(a-a0); adev=adev[np.isfinite(adev)]
     return {
-      'virtual_bond_energy_k500': float(0.5*k_virtual_bond*np.sum(dev*dev)),
+      'mean_squared_adjacent_ca_distance_deviation_A2': float(np.mean(dev*dev)) if len(dev) else float('nan'),
       'adjacent_ca_distance_mae_A': float(np.mean(np.abs(dev))) if len(dev) else float('nan'),
       'adjacent_distance_outliers_gt_0p5_A': int(np.sum(np.abs(dev)>0.5)),
       'adjacent_distance_outliers_gt_1p0_A': int(np.sum(np.abs(dev)>1.0)),

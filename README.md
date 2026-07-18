@@ -100,7 +100,7 @@ This workflow generates matched BA-ARAP-NMA and Linear C-alpha ANM branches. It 
 
 ## HCV helicase example
 
-The included article-scale example uses the HCV helicase pair, which showed the clearest minimum-RMSD improvement in the associated study. The PDB files contain the common mapped C-alpha residues used for the two-state comparison.
+The included two-state example uses an HCV helicase pair. The PDB files contain the common mapped C-alpha residues used for the comparison.
 
 ```bash
 cd examples/hcv_helicase
@@ -124,7 +124,7 @@ Each generated branch contains:
 - `ca_trace_structures.pdb`: the same structures with sequential `CONECT` records;
 - `view_ca_structures.pml`: PyMOL visualization script;
 - `selected_structures/`: structures at the beginning, quarter points, midpoint, three-quarter point, and end;
-- `frame_metrics.tsv`: the local-geometry measurements used in the study, plus target RMSD and transition coverage when a target is supplied;
+- `frame_metrics.tsv`: frame-level local-geometry measurements, plus target RMSD and transition coverage when a target is supplied;
 - `branch_summary.json` and `run_config.json`;
 - `fullatom_decorated_structures.pdb`, `selected_fullatom_structures/`, and `view_fullatom_decorated.pml` when the input PDB contains non-C-alpha protein atoms.
 
@@ -134,9 +134,9 @@ At the run level, `branch_summary.tsv` lists all branches. The two-state workflo
 
 ## Metrics
 
-`frame_metrics.tsv` reports only the measurements used in the associated study:
+`frame_metrics.tsv` reports the following measurements:
 
-- harmonic virtual-bond distortion proxy (`k = 500`);
+- mean squared adjacent C-alpha distance deviation (A^2), calculated directly as the mean of squared input-relative adjacent-distance deviations;
 - adjacent C-alpha distance mean absolute error;
 - adjacent-distance outlier counts above 0.5 Å and 1.0 Å;
 - virtual-angle mean absolute error;
@@ -147,7 +147,7 @@ At the run level, `branch_summary.tsv` lists all branches. The two-state workflo
 
 BA-ARAP-NMA is a C-alpha structure-generation method, not a molecular-dynamics trajectory generator. Frame number records position in the requested-amplitude order rather than physical time. The software does not restore side-chain packing, solvent interactions, hydrogen bonding, or full-atom stereochemistry; subsequent rebuilding and refinement remain necessary for full-atom applications.
 
-Article-specific benchmark calculations, manuscript source data, and figure/table reproduction scripts are intentionally excluded from this user release and are distributed in the separate article reproduction package.
+Project-specific benchmark datasets, manuscript assets, and custom figure/table scripts are not part of this standalone software release.
 
 ## Testing
 
@@ -157,15 +157,6 @@ pytest -q
 ```
 
 The GitHub repository also includes an automated test workflow for Python 3.10–3.13.
-
-## Repository and citation
-
-The source code and fixed software releases are available from:
-
-- Repository: https://github.com/chriszyu9605/BA-ARAP-NMA
-- Version 1.0.0 release: https://github.com/chriszyu9605/BA-ARAP-NMA/releases/tag/v1.0.0
-
-If you use BA-ARAP-NMA, please cite the software using the metadata provided in `CITATION.cff`. The citation for the associated article will be added after publication.
 
 ## License
 

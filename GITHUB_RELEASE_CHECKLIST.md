@@ -7,4 +7,4 @@
 5. Create tag `v1.0.0` from this validated initial commit and create a GitHub Release titled `BA-ARAP-NMA 1.0.0`. Attach the validated release ZIP if a separately downloadable archive is desired.
 6. After the release URL is known, add the repository URL to `pyproject.toml` under `[project.urls]` and to `CITATION.cff` as `repository-code`, then commit and push this metadata update to `main`. Do not move the `v1.0.0` tag; it should remain attached to the validated release contents.
 7. Add the repository or release URL to the manuscript Data Availability Statement.
-8. After the associated article is published, add its citation to `CITATION.cff` and the README.
+8. Update `CITATION.cff` and the README when a recommended software citation becomes available.

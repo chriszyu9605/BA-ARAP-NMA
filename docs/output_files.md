@@ -8,7 +8,7 @@ Each mode-rank/orientation branch contains:
 - `ca_trace_structures.pdb`: the same structures with sequential `CONECT` records for trace visualization.
 - `view_ca_structures.pml`: PyMOL script for viewing all structural states.
 - `selected_structures/`: structures at the start, quarter points, midpoint, three-quarter point, and end of the sampled amplitude range.
-- `frame_metrics.tsv`: requested amplitude and the local-geometry measurements used in the associated article.
+- `frame_metrics.tsv`: requested amplitude and frame-level local-geometry measurements, including the mean squared adjacent C-alpha distance deviation (A^2), calculated directly from full-precision coordinates.
 - `branch_summary.json`: branch-level summary.
 - `run_config.json`: exact branch settings.
 - `fullatom_decorated_structures.pdb`, `selected_fullatom_structures/`, and `view_fullatom_decorated.pml` when the input PDB contains non-C-alpha protein atoms.
