@@ -28,6 +28,13 @@ classifiers = [
   "Topic :: Scientific/Engineering :: Bio-Informatics"
 ]
 
+[project.urls]
+Homepage = "https://github.com/chriszyu9605/BA-ARAP-NMA"
+Repository = "https://github.com/chriszyu9605/BA-ARAP-NMA"
+Documentation = "https://github.com/chriszyu9605/BA-ARAP-NMA#readme"
+Issues = "https://github.com/chriszyu9605/BA-ARAP-NMA/issues"
+Releases = "https://github.com/chriszyu9605/BA-ARAP-NMA/releases"
+
 [project.optional-dependencies]
 test = ["pytest>=8"]
 

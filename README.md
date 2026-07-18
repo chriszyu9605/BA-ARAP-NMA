@@ -147,7 +147,14 @@ At the run level, `branch_summary.tsv` lists all branches. The two-state workflo
 
 BA-ARAP-NMA is a C-alpha structure-generation method, not a molecular-dynamics trajectory generator. Frame number records position in the requested-amplitude order rather than physical time. The software does not restore side-chain packing, solvent interactions, hydrogen bonding, or full-atom stereochemistry; subsequent rebuilding and refinement remain necessary for full-atom applications.
 
-Project-specific benchmark datasets, manuscript assets, and custom figure/table scripts are not part of this standalone software release.
+This distribution contains the complete standalone software, documentation, tests, and examples required to install and use BA-ARAP-NMA.
+
+## Repository and citation
+
+- Repository: https://github.com/chriszyu9605/BA-ARAP-NMA
+- Version 1.0.0 release: https://github.com/chriszyu9605/BA-ARAP-NMA/releases/tag/v1.0.0
+
+If you use BA-ARAP-NMA, please cite the software using the metadata in `CITATION.cff`.
 
 ## Testing
 
