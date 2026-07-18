@@ -13,7 +13,11 @@ license-files = ["LICENSE"]
 authors = [
   {name = "Zhenyu Zhang"},
   {name = "Dejian Liu"},
+  {name = "Haiying Yu"},
   {name = "Luyan Ma"}
+]
+maintainers = [
+  {name = "Zhenyu Zhang", email = "zhangzhenyu222@mails.ucas.ac.cn"}
 ]
 dependencies = ["numpy>=1.23,<3", "scipy>=1.9,<2"]
 keywords = ["protein", "normal mode analysis", "elastic network model", "structural bioinformatics"]

@@ -2,13 +2,15 @@ cff-version: 1.2.0
 message: "If you use BA-ARAP-NMA, please cite this software release."
 title: "BA-ARAP-NMA"
 version: "1.0.0"
-date-released: 2026-07-18
 type: software
 authors:
   - family-names: Zhang
     given-names: Zhenyu
+    email: "zhangzhenyu222@mails.ucas.ac.cn"
   - family-names: Liu
     given-names: Dejian
+  - family-names: Yu
+    given-names: Haiying
   - family-names: Ma
     given-names: Luyan
 repository-code: "https://github.com/chriszyu9605/BA-ARAP-NMA"
